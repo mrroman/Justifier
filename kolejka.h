@@ -3,7 +3,7 @@
 
 typedef struct
 {
-	int n;
+	int n,m;
 	int size;
 	void **buffer;
 } Kolejka;

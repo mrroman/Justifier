@@ -8,6 +8,7 @@ Kolejka* kolejka_new(int size)
 	
 	kolejka = (Kolejka *)malloc(sizeof(Kolejka));
 	kolejka->n = 0;
+	kolejka->m = 0;
 	kolejka->size = size;
 	kolejka->buffer = (void **)malloc(sizeof(void *) * size);
 	
@@ -16,17 +17,15 @@ Kolejka* kolejka_new(int size)
 
 void kolejka_push(Kolejka *kolejka, void *element)
 {
-	kolejka->buffer[kolejka->n] = element;
-	kolejka->n = (kolejka->n + 1) % kolejka->size;
+	kolejka->buffer[kolejka->m] = element;
+	kolejka->m = (kolejka->m + 1) % kolejka->size;
 }
 
 void *kolejka_pop(Kolejka *kolejka)
 {
-	if (kolejka->n == 0)
-		kolejka->n = kolejka->size - 1;
-	else
-		kolejka->n--;
-		
-	return kolejka->buffer[kolejka->n];
+	void *element = kolejka->buffer[kolejka->n];
+	
+	kolejka->n = (kolejka->n + 1) % kolejka->size;	
+	return element;
 }
 

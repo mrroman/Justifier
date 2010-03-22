@@ -1,7 +1,7 @@
 
 
-test: kolejka-test
+test: test-kolejka
 
-kolejka-test: kolejka.o test-kolejka.o
+test-kolejka: kolejka.o test-kolejka.o
 	gcc -o test-kolejka kolejka.o test-kolejka.o
 	./test-kolejka
