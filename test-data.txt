@@ -1,0 +1,1 @@
+Napisz w jezyku C program, ktory czyta ze standardowego wejscia ciag slow i wysyla je na standardowe wyjscie wykonujac justyfikacje, tj. wyrownywanie do lewego i prawego marginesu.

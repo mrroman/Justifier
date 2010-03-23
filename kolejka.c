@@ -29,3 +29,7 @@ void *kolejka_pop(Kolejka *kolejka)
 	return element;
 }
 
+void *kolejka_peek(Kolejka *kolejka, int n)
+{
+	n = (n > kolejka->m ? kolejka)
+}
